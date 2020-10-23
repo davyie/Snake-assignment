@@ -16,10 +16,10 @@ You don't have to understand every single line in the code but instead understan
 # Add the project to IntelliJ 
 Here are some pictures to help you with importing the project to IntelliJ. 
 * Click on the import project button in the first menu. 
-![][images/pic1.png]
+![](images/pic1.png)
 
 * Select the path to the project and import everything in the folder. 
-![][images/pic1.png]
+![](images/pic1.png)
 
 * Select import with Gradle and you should have it working. Maybe you have to set up a SDK in IntelliJ but it prompts you to do so.
-![][images/pic1.png]
+![](images/pic1.png)
