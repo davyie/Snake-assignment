@@ -19,7 +19,7 @@ Here are some pictures to help you with importing the project to IntelliJ.
 ![](images/pic1.png)
 
 * Select the path to the project and import everything in the folder. 
-![](images/pic1.png)
+![](images/pic2.png)
 
 * Select import with Gradle and you should have it working. Maybe you have to set up a SDK in IntelliJ but it prompts you to do so.
-![](images/pic1.png)
+![](images/pic3.png)
