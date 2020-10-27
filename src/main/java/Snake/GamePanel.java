@@ -252,8 +252,8 @@ public class GamePanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (running) {
-            move();
             checkApple();
+            move();
             checkCollisions();
         }
         repaint();
