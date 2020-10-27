@@ -106,11 +106,11 @@ public class GamePanel extends JPanel implements ActionListener {
             // TODO: You can look at how the head is drawn.
 
             g.setColor(Color.green); // Set the color of the snake
-            g.fillRect(x[0], y[0], UNIT_SIZE, UNIT_SIZE); // Draw the head on the panel
 
-            // Edit here
-
-            // TODO: Try to stay within these comments. :D
+            // draw the whole body. x[0], y[0] is a head, x[1], y[1] is a neck and so on
+            for (int i = 0; i < bodyParts; i++) {
+                g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
+            }
 
             // Write the text on the panel
             g.setColor(Color.RED);
@@ -156,9 +156,18 @@ public class GamePanel extends JPanel implements ActionListener {
         // TODO: You will only need to edit between these comments
 
         // Edit here
-
-
-        // TODO: You will only need to edit between these comments
+        int prevX = x[0];
+        int prevY = y[0];
+        int tmpX;
+        int tmpY;
+        for (int i = 1; i < bodyParts; i++) {
+            tmpX = x[i];
+            tmpY = y[i];
+            x[i] = prevX;
+            y[i] = prevY;
+            prevX = tmpX;
+            prevY = tmpY;
+        }
 
         // This moves the head only. The body has to follow the head
         switch (direction) {
@@ -183,8 +192,8 @@ public class GamePanel extends JPanel implements ActionListener {
      */
     public void checkApple() {
         if (x[0] == appleX && y[0] == appleY) {
-            // TODO: Increment the number of bodyparts that the snake has in this method.
             applesEaten++; // Increments the number of eaten apples
+            bodyParts++; // Increment the number of bodyparts that the snake has in this method.
             newApple();
         }
     }
