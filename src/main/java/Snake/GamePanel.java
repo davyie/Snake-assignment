@@ -155,18 +155,10 @@ public class GamePanel extends JPanel implements ActionListener {
         // TODO: After you have moved the parts we have to render them in the draw() method.
         // TODO: You will only need to edit between these comments
 
-        // Edit here
-        int prevX = x[0];
-        int prevY = y[0];
-        int tmpX;
-        int tmpY;
         for (int i = 1; i < bodyParts; i++) {
-            tmpX = x[i];
-            tmpY = y[i];
-            x[i] = prevX;
-            y[i] = prevY;
-            prevX = tmpX;
-            prevY = tmpY;
+            x[i] = x[i-1];
+            y[i] = y[i-1];
+
         }
 
         // This moves the head only. The body has to follow the head
